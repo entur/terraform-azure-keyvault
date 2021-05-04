@@ -30,8 +30,8 @@ provider "azurerm" {
 }
 ```
 
-## Authentication
-Authentication is handled outside this module.
+## Authentication and authorization
+Authentication and authorization is handled outside this module.
 
 ## Networking
 ### Connecting from an application
