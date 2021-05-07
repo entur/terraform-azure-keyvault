@@ -4,7 +4,7 @@ locals {
   # If kubernetes_create_secret == true but var.kubernetes_namespaces is not set (default), set it to a single entry list containing var.app_name.
   kubernetes_namespaces = var.kubernetes_create_secret == false ? [] : length(var.kubernetes_namespaces) > 0 ? var.kubernetes_namespaces : [var.app_name]
 
-  kubernetes_secret_name = var.kubernetes_secret_name != null ? var.kubernetes_secret_name : "${var.app_name}-kvault-credentials"
+  kubernetes_secret_name = var.kubernetes_secret_name != null ? var.kubernetes_secret_name : "${var.app_name}-kvault-config"
   key_vault_name         = var.name != null ? var.name : "kv-${local.shortened_app_name}-${var.environment}"
   shortened_app_name     = replace(substr(var.app_name, 0, 14), "-", "")
 }

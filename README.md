@@ -69,9 +69,9 @@ For instructions on how to connect securely from a local machine, please see int
 | host | The fully qualified domain name of the instance |
 
 ### Example Kubernetes secret
-By default, secret names are prefixed with the application name specified in `var.app_name`, i.e. `<appname>-kvault-credentials`. 
+By default, secret names are prefixed with the application name specified in `var.app_name`, i.e. `<appname>-kvault-config`. 
 
-If `var.app_name` = `petshop`, it would produce a secret named `petshop-kvault-credentials`.
+If `var.app_name` = `petshop`, it would produce a secret named `petshop-kvault-config`.
 ```
 apiVersion: v1
 data:
