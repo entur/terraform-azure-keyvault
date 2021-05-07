@@ -75,6 +75,7 @@ resource "kubernetes_secret" "privatelink" {
   }
 
   data = {
-    KEY_VAULT_HOST = azurerm_private_dns_a_record.privatelink.fqdn
+    KEY_VAULT_HOST = "${azurerm_key_vault.main.name}.vault.azure.net"
+    KEY_VAULT_URI  = azurerm_key_vault.main.vault_uri
   }
 }

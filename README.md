@@ -64,6 +64,7 @@ For instructions on how to connect securely from a local machine, please see int
 |------|-------------|
 | key_vault_name | The instance name |
 | key_vault_id | The instance object ID |
+| key_vault_uri | The Key Vault URI |
 | custom_dns_configs | Custom DNS configuration including private IP address |
 | host | The fully qualified domain name of the instance |
 
@@ -75,6 +76,7 @@ If `var.app_name` = `petshop`, it would produce a secret named `petshop-kvault-c
 apiVersion: v1
 data:
   KEY_VAULT_HOST: ...
+  KEY_VAULT_URI: ...
 kind: Secret
 [...]
 ```
