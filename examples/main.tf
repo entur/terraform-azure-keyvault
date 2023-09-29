@@ -11,7 +11,7 @@ provider "kubernetes" {}
 module "keyvault" {
   source = "github.com/entur/terraform-azure-keyvault?ref=v0.0.1"
   # source = "../"
-  
+
   resource_group_name = var.resource_group_name
   location            = var.location
   tags                = var.tags
