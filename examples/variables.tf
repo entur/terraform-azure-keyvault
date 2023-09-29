@@ -33,3 +33,15 @@ variable "kv_disable_soft_delete" {
   type        = bool
   default     = false
 }
+
+variable "soft_delete_retention_days" {
+  description = "The number of days that items should be retained for once soft-deleted"
+  type        = number
+  default     = 7
+}
+
+variable "purge_protection_enabled" {
+  description = "Whether to enable purge protection"
+  type        = bool
+  default     = true
+}
