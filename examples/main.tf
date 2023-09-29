@@ -19,4 +19,6 @@ module "keyvault" {
   app_name     = var.app_name
   environment  = var.environment
   landing_zone = var.landing_zone
+  purge_protection_enabled = var.purge_protection_enabled
+  soft_delete_retention_days = var.soft_delete_retention_days
 }
