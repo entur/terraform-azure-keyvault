@@ -1,0 +1,4 @@
+skip-check:
+  - CKV_TF_1  # We tag semantic versions, not commit
+  - CKV_K8S_21  # Namespace set during deploy, ignore
+  - CKV_AZURE_189  # Access is limited by network ACLs
